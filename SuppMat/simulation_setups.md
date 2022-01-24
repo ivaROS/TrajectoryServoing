@@ -6,24 +6,24 @@ This file provides details about the setup of simulation experiments. All simula
 We build a simulation environment in Gazebo and spawn a Turtlebot as the non-holonomic robot. A simulated stereo camera with 0.07m baseline.
 
 <p float="left">
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/tsrb_env.png" width ="100" height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/turtlebot_sim.png" width ="100" height = 55% /> 
+  <img src="https://github.com/ivaROS/TrajectoryServoing/tree/main/SuppMat/assets/tsrb_env.png" width ="100" height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/tree/main/SuppMat/assets/turtlebot_sim.png" width ="100" height = 55% /> 
 </p>
 
 ## Testing Trajectory Shapes
 
 There are 5 paths loosely based on Dubins paths. The average trajectory lengths are ∼4m. They are designed to ensure that sufficient feature points, visible in the first frame, remain visible along the entirety of the path.
 
-<img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/short_trajs.png" width =55% height = 55% />
+<img src="https://github.com/ivaROS/TrajectoryServoing/tree/main/SuppMat/assets/short_trajs.png" width =55% height = 55% />
 
 ## SLAM Stack
 
 A [Good Feature (GF) ORB-SLAM system](https://www.semanticscholar.org/paper/Good-Feature-Matching%3A-Toward-Accurate%2C-Robust-With-Zhao-Vela/da7817d3ed68d5cfbf47f89c39a8042896cae2c1) is used to estimate camera poses. It is configured to work with a stereo camera and integrated into a loosely coupled, [visual-inertial (VI) system] (https://github.com/ethz-asl/ethzasl_msf) based on a multi-rate filter to form a VI-SLAM system.
 
 <p float="left">
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/feature.png" width ="100" height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/feature2.png" width ="100" height = 55% /> 
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/feature3.png" width ="100" height = 55% /> 
+  <img src="https://github.com/ivaROS/TrajectoryServoing/tree/main/SuppMat/assets/feature.png" width ="100" height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/tree/main/SuppMat/assets/feature2.png" width ="100" height = 55% /> 
+  <img src="https://github.com/ivaROS/TrajectoryServoing/tree/main/SuppMat/assets/feature3.png" width ="100" height = 55% /> 
 </p>
 
 ## Frame-by-frame Stereo Feature Tracking System for VS+
