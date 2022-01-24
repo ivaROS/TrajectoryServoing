@@ -7,7 +7,7 @@ We build a simulation environment in Gazebo and spawn a Turtlebot as the non-hol
 
 <p float="left">
   <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/tsrb_env.png" width = 30% height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/turtlebot_sim.png" width = 30% height = 55% /> 
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/turtlebot_sim.png" width = 22% height = 55% /> 
 </p>
 
 ## Testing Trajectory Shapes
