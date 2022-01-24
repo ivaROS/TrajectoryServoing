@@ -1,4 +1,6 @@
 SuppMat/assets/*.aux
 SuppMat/assets/*.log
 SuppMat/assets/*.synctex.gz
+SuppMat/assets/*.bbl
+SuppMat/assets/*.blg
 SuppMat/assets/*.pdf

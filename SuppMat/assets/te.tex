@@ -1,0 +1,242 @@
+\section{Terminal Error (TE) (reported in the paper)}
+Terminal error is the distance between robot's stopped pose 
+$\boldsymbol{p}_{rob}(t_{end})$ 
+to the final stopped position $\boldsymbol{p}_{traj}(t_{end})$ 
+of the desired trajectory.
+
+\begin{equation} 
+     \text{TE} = || \boldsymbol{p}_{rob}(t_{end}) - 
+     \boldsymbol{p}_{traj}(t_{end}) ||_2
+\end{equation}
+
+\subsection{Short Distance Simulation Outcomes}
+\vspace*{-0.5em}
+\begin{figure*}[h]
+\begin{minipage}[t]{\textwidth}
+\centering
+%\vspace*{-1.45in}
+\captionof{table}{ Short distance simulation TE outcomes.\label{tab:shortTE}}
+\vspace*{-0.5em}
+\begin{tikzpicture}[inner sep=0pt,outer sep=0pt,scale=1, every node/.style={scale=0.8}]
+    % sim te
+    \node[anchor=west] (sim_te) at (0pt, 0)
+    {
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{|c||c|cc|}
+    \hline 
+    \textbf{Seq.} & PO & SLAM & TS \\ 
+    \hline 
+%      & \textcolor{white}{$v,\omega$} & & \\
+    SS  & 1.06  & 1.53  & 2.05  \\ 
+    SWT & 1.24  & 2.23  & 2.87  \\ 
+    SST & 2.07  & 3.33  & 2.47  \\ 
+    STS & 1.97  & 4.14  & 2.18  \\ 
+    STT & 4.34  & 4.99  & 2.42  \\ 
+    \hline 
+    \textbf{Avg.} & 2.14 & 3.24 & \textbf{2.40} \\ 
+    %\textbf{Std. ATE} & 0.0000 & 0.0000 & 0.0000 \\
+%    & \textcolor{white}{$v,\omega$} & \\
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text centered] (sim_te_cap) 
+    at ($(sim_te.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} Sim TE (cm)};   
+      
+    % p-values
+    \node[anchor=west] (sim_te_p) at ($(sim_te.east) + (5pt, 0)$)
+    {
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|l||c|}
+    \hline 
+    \textbf{PO} vs \textbf{SLAM} & 2.4e-3 \\ 
+    \hline 
+    \textbf{PO} vs \textbf{TS} & 1.8e-1 \\ 
+    \hline
+    \textbf{SLAM} vs \textbf{TS} & 5.6e-3 \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text width=5cm, text centered] (sim_te_p_cap) 
+    at ($(sim_te_p.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} p-values of \\ pairwise comparisons};        
+
+\end{tikzpicture}
+\end{minipage}
+  \vspace*{-1.5em}
+\end{figure*}
+
+\subsection{Long Distance Simulation Outcomes}
+\vspace*{-0.5em}
+\begin{figure*}[h]
+\begin{minipage}[t]{\textwidth}
+\centering
+%\vspace*{-1.45in}
+\captionof{table}{ Long distance simulation TE outcomes.\label{tab:longTE}}
+\vspace*{-0.5em}
+\begin{tikzpicture}[inner sep=0pt,outer sep=0pt,scale=1, every node/.style={scale=0.8}]
+    % sim TE
+	\node[anchor=north west] (sim_te) at (0, 0pt)
+    {
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{|c||c|cc|c|}
+    \hline 
+    \textbf{Seq.} & PO & SLAM & TS & TS+PO \\ 
+    \hline 
+%      & \textcolor{white}{$v,\omega$} & & \\
+    LRU & 8.57  & 10.66   & 6.42  & 4.15 \\ 
+    LLU & 5.54  & 29.48  & 15.75 & 4.02 \\ 
+    LST & 6.01  & 7.60  & 1.76  & 6.61 \\ 
+    LZZ & 7.83  & 9.28   & 9.00  & 12.21 \\ 
+    \hline 
+    \textbf{Avg.} & 6.99 & 14.26 & \textbf{8.23} & 6.75 \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+    \node[anchor=south, text width=5cm, text centered] (sim_te_cap) 
+    at ($(sim_te.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(a)} Sim {TE} (cm)};
+      
+    % p-values
+    \node[anchor=west] (sim_te_p) at ($(sim_te.east) + (5pt, 0)$)
+    {
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|l||c|}
+    \hline 
+    \textbf{PO} vs \textbf{SLAM} & 1.4e-3 \\ 
+    \hline 
+    \textbf{PO} vs \textbf{TS} & 1.6e-1 \\ 
+    \hline
+    \textbf{PO} vs \textbf{TS+PO} & 4.2e-1 \\ 
+    \hline 
+    \textbf{SLAM} vs \textbf{TS} & 8.2e-3 \\ 
+    \hline 
+    \textbf{SLAM} vs \textbf{TS+PO} & 1.8e-3 \\ 
+    \hline 
+    \textbf{TS} vs \textbf{TS+PO} & 1.8e-1 \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text width=5cm, text centered] (sim_te_p_cap) 
+    at ($(sim_te_p.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} p-values of \\ pairwise comparisons};       
+
+\end{tikzpicture}
+\end{minipage}
+  \vspace*{-1.5em}
+\end{figure*}
+
+\subsection{Short Distance Real Experiment Outcomes}
+\vspace*{-0.5em}
+\begin{figure*}[h]
+\begin{minipage}[t]{\textwidth}
+\centering
+%\vspace*{-1.45in}
+\captionof{table}{ Short distance real experiment TE outcomes.\label{tab:shortRealTE}}
+\vspace*{-0.5em}
+\begin{tikzpicture}[inner sep=0pt,outer sep=0pt,scale=1, every node/.style={scale=0.8}]
+    % real te
+    \node[anchor=west] (real_te) at (0pt, 0)
+    {
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{|c||ccc|}
+    \hline 
+    \textbf{Seq.} & RO & SLAM & TS \\ 
+    \hline 
+%      & \textcolor{white}{$v,\omega$} & & \\
+    SS  & 4.5  & 8.9  & 4.9  \\ 
+    SWT & 6.8  & 10.4  & 4.9  \\ 
+    SST & 8.0  & 13.1  & 5.7  \\ 
+    STS & 13.3  & 11.9  & 5.0  \\ 
+    STT & 9.5  & 10.5  & 3.5  \\ 
+    \hline 
+    \textbf{Avg.} & 8.4 & 10.9 & \textbf{4.8} \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text centered] (real_te_cap) 
+    at ($(real_te.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} Real TE (cm)};   
+      
+    % p-values
+    \node[anchor=west] (real_te_p) at ($(real_te.east) + (5pt, 0)$)
+    {
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|l||c|}
+    \hline 
+    \textbf{RO} vs \textbf{SLAM} & 4.6e-3 \\ 
+    \hline 
+    \textbf{RO} vs \textbf{TS} & \textless 1e-5 \\ 
+    \hline
+    \textbf{SLAM} vs \textbf{TS} & \textless 1e-5 \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text width=5cm, text centered] (real_te_p_cap) 
+    at ($(real_te_p.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} p-values of \\ pairwise comparisons};        
+
+\end{tikzpicture}
+\end{minipage}
+  \vspace*{-1.5em}
+\end{figure*}
+
+\subsection{Long Distance Real Experiment Outcomes}
+\vspace*{-0.5em}
+\begin{figure}[H]
+\begin{minipage}[t]{\textwidth}
+\centering
+%\vspace*{-1.45in}
+\captionof{table}{ Long distance real experiment TE outcomes.\label{tab:longRealTE}}
+\vspace*{-0.5em}
+\begin{tikzpicture}[inner sep=0pt,outer sep=0pt,scale=1, every node/.style={scale=0.8}]
+    % real te
+    \node[anchor=west] (real_te) at (0pt, 0)
+    {
+    \setlength{\tabcolsep}{4pt}
+    \begin{tabular}{|c||ccc|}
+    \hline 
+    \textbf{Seq.} & RO & SLAM & TS \\ 
+    \hline 
+%      & \textcolor{white}{$v,\omega$} & & \\
+    LS  & 8.2  & 14.1  & 10.9 \\ 
+    LT & 12.8  & 11.8  & 6.8 \\ 
+    \hline 
+    \textbf{Avg.} & 10.5 & 13.0 & \textbf{8.9} \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text centered] (real_te_cap) 
+    at ($(real_te.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} Real TE (cm)};   
+      
+    % p-values
+    \node[anchor=west] (real_te_p) at ($(real_te.east) + (5pt, 0)$)
+    {
+    \setlength{\tabcolsep}{5pt}
+    \begin{tabular}{|l||c|}
+    \hline 
+    \textbf{RO} vs \textbf{SLAM} & 2.3e-1 \\ 
+    \hline 
+    \textbf{RO} vs \textbf{TS} & 1.3e-1 \\ 
+    \hline
+    \textbf{SLAM} vs \textbf{TS} & 1.2e-1 \\ 
+    \hline 
+    \end{tabular}
+    };
+    
+	\node[anchor=south, text width=5cm, text centered] (real_te_p_cap) 
+    at ($(real_te_p.north) + (0pt, 2pt)$)
+    {\normalsize \textbf{(b)} p-values of \\ pairwise comparisons};        
+
+\end{tikzpicture}
+\end{minipage}
+%  \vspace*{-1.5em}
+\end{figure}
