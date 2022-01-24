@@ -1,7 +1,7 @@
 # Real Experiment Setups
 This file provides details about the setup of real experiments. All experiments are run on a [LoCoBot](http://www.locobot.org/) equipped with a RealSense stereo camera D435i and an Intel NUC (i5-7260U) (single thread passmark of 1991; multi-thread score of 3884)
 
-<img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/locobot.png" width = 30% height = 55% />
+<img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/locobot.png" width = 20% height = 55% />
 
 ## Experiment Scenarios
 
@@ -18,8 +18,8 @@ In the long trajectory experiments, due the long length of the trajectory and li
 The same short trajectory templates are used. But in order to maintain feature tracking without triggering feature replenishment, they are scaled down to ∼2.4m. Two new long trajectory template are created.
 
 <p float="left">
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/LS.png" width = 30% height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/LT.png" width = 30% height = 55% /> 
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/LS.png" width = 10% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/LT.png" width = 10% height = 55% /> 
 </p>
 
 ## [Short Distance Experiments Demos](https://youtu.be/haGQeROMAgo)
