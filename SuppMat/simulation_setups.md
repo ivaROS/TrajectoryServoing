@@ -14,7 +14,10 @@ We build a simulation environment in Gazebo and spawn a Turtlebot as the non-hol
 
 There are 5 paths loosely based on Dubins paths. The average trajectory lengths are ∼4m. They are designed to ensure that sufficient feature points, visible in the first frame, remain visible along the entirety of the path.
 
-<img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/short_trajs.png" width = 30% height = 55% />
+<p float="left">
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/short_trajs.png" width = 30% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/long_trajs.png" width = 30% height = 55% />
+</p>
 
 ## SLAM Stack
 
