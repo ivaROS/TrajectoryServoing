@@ -34,7 +34,7 @@ Pose estimation errors could be involved to cause worse performance.
 Therefore, a number in between is the best choice for $\tau_{fr}$. 
 We used $\tau_{fr}=10$ in all of our experiments.
 
-\TODO{add ale and double check if all values are up to date. Add ALE to the figure}
+%\TODO{add ale and double check if all values are up to date. Add ALE to the figure}
 
 \begin{figure*}[h]
 \begin{minipage}[t]{\textwidth}
@@ -51,7 +51,7 @@ We used $\tau_{fr}=10$ in all of our experiments.
   \hline 
   \textbf{$\tau_{fr}$} & 4 & 6 & \textbf{10} & 16 & 22 & 36 & 50 \\ 
   \hline 
-  \textbf{ALE}  &  &  & 4.52 &  &  &  &  \\ 
+  \textbf{ALE}  & 7.01 & 5.11 & 4.52 & 4.03 & 4.67 & 4.67 & 4.57 \\ 
   \textbf{TE}   & 14.08 & 9.97 & \textbf{8.23} & 8.53 & 9.73 & 9.53 & 10.47  \\ 
   \textbf{NPDA} & 12.09 & 7.16 & 6.37 & \textbf{4.96} & 6.66 & 5.61 & 7.17  \\ 
   \textbf{\# of Reg/m} & \textbf{1.4} & 1.5 & 1.6 & 1.7 & 1.8 & 2.0 & 2.7 \\ 
@@ -79,7 +79,7 @@ We used $\tau_{fr}=10$ in all of our experiments.
 \begin{tikzpicture}[inner sep=0pt,outer sep=0pt]
 	  \node[anchor=south west] (pop) at (0in, 0in)
       {{\includegraphics[height=2.2in,clip=true,trim=0in 0in
-      0in 0in]{figs/tau_npda_te.png}}};
+      0in 0in]{figs/tau_ale_te_npda.png}}};
 \end{tikzpicture}
 \end{minipage}
 \vspace*{-0.5em}
