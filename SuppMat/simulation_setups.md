@@ -19,10 +19,10 @@ There are 5 paths loosely based on Dubins paths. The average trajectory lengths 
 There 4 different templates that are constructed from straight and turn segments. The scale relative to the environment is shown in the image.
 
 <p float="left">
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/short_trajs.png" width = 30% height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/sim_short_comp.png" width = 37% height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/long_trajs.png" width = 37% height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/sim_long_comp.png" width = 37% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/short_trajs.png" width = 25% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/sim_short_comp.png" width = 18% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/long_trajs.png" width = 30% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/sim_long_comp.png" width = 18% height = 55% />
 </p>
 
 ## SLAM Stack
