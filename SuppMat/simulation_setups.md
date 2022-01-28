@@ -16,7 +16,7 @@ There are 5 paths loosely based on Dubins paths. The average trajectory lengths 
 
 <p float="left">
   <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/short_trajs.png" width = 30% height = 55% />
-  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/long_trajs.png" width = 30% height = 55% />
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/long_trajs.png" width = 37% height = 55% />
 </p>
 
 ## SLAM Stack
