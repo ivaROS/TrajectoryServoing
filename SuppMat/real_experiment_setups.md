@@ -15,11 +15,12 @@ In the long trajectory experiments, due the long length of the trajectory and li
 
 ## Testing Trajectory Shapes
 
-The same short trajectory templates are used. But in order to maintain feature tracking without triggering feature replenishment, they are scaled down to ∼2.4m. Two new long trajectory template are created.
+The same short trajectory templates are used. But in order to maintain feature tracking without triggering feature replenishment, they are scaled down to ∼2.4m. Two new long trajectory template are created. The scale relative to the environment is shown in the image.
 
 <p float="left">
   <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/LS.png" width = 10% height = 55% />
   <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/LT.png" width = 10% height = 55% /> 
+  <img src="https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/assets/figs/real_long_comp.png" width = 37% height = 55% />
 </p>
 
 ## [Short Distance Experiments Demos](https://youtu.be/haGQeROMAgo)
