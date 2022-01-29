@@ -9,12 +9,12 @@ This paper describes a stereo image-based visual servoing system for trajectory 
 
 - [Manuscript symbols](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/symbols.md)
 - [Manuscript abbreviations](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/abbreviations.md)
-<!-- - [Links to main implementation code files](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/links_to_algorithm_sections.md) -->
 - [Simulation setups](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/simulation_setups.md)
 - [Real experiment setups](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/real_experiment_setups.md)
 - [Performance evaluation metrics and results](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/EvaluationMetrics.pdf)
 - [Trajectory servoing control gains](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/TSControlGain.pdf)
 - [Ablation study of feature replenishment threshold ![\tau_{fr}](https://latex.codecogs.com/svg.latex?\tau_{fr})](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/ReplenishmentThresh.pdf)
+<!-- - [Links to main implementation code files](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/links_to_algorithm_sections.md) -->
 
 # Dependencies and Installation
 
