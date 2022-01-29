@@ -1,0 +1,15 @@
+<launch>
+
+  <arg name="planned_lin_vel" default="false"/>
+<!-- initialize controller -->
+<node name="turtlebot_controller" pkg="turtlebot_trajectory_controller" type="trajectory_controller_node" output="screen" args="" >
+    <remap from="odom" to="/ground_truth/state"/>
+    <param name="trajectory_controller/k_turn" value="1"/>
+    <param name="trajectory_controller/k_drive_x" value="1"/>
+    <param name="trajectory_controller/k_drive_y" value="1"/>
+
+    <param name="trajectory_controller/planned_linear_vel" value="$(arg planned_lin_vel)"/>
+</node>
+
+</launch>
+

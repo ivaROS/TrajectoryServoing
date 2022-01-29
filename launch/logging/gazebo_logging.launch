@@ -1,0 +1,10 @@
+<launch>
+
+<arg name="path_data_logging" default = "/home/wu/DATA/IVAL/traj_servoing_benchmark/test/logs/"/>
+<arg name="topics" default="/visual/odom /odom_sparse /ground_truth/state /ORB_SLAM/camera_pose_in_imu /desired_path /turtlebot_controller/trajectory_controller/desired_trajectory /cmd_vel_mux/input/navi "/>
+
+<!-- initialize rosbag recording -->
+<node name="data_logging" type="record" pkg="rosbag" args="$(arg topics) -O $(arg path_data_logging).bag">
+</node>
+
+</launch>

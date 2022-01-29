@@ -1,0 +1,9 @@
+<launch>
+
+<!-- initialize controller -->
+<node name="turtlebot_controller" pkg="turtlebot_trajectory_controller" type="trajectory_controller_node" output="screen" args="" >
+    <remap from="odom" to="/odom"/>
+</node>
+
+</launch>
+

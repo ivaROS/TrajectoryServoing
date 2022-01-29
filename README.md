@@ -20,7 +20,11 @@ This paper describes a stereo image-based visual servoing system for trajectory 
 
 - ROS (Kinetic Ubuntu 16.04) [Installation Link](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
-<!-- See NavBench [https://github.com/ivalab/NavBench](https://github.com/ivalab/NavBench) for rosinstall instructions and launching experiments.  -->
+See the [installation instructions](https://github.com/ivaROS/TrajectoryServoing/blob/main/installation_guide.md)
+
+# Run benchmark
+
+In the `benchmark` directory, there are multiple benchmark scripts to show how to run all simulations. There are a few launch files inside the script for running every module of the simulation.
 
 <!-- # BibTex Citation
 ```

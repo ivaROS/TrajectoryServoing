@@ -1,0 +1,14 @@
+<launch>
+
+    <arg name="config_file_path" default="$(find trajectory_servoing)/configs/feature_tracking_config/config.yaml"/>
+
+    <node pkg="sparse_stereo" type="pips_sparse_stereo_node" name="sparse_stereo" output="screen" >
+        <param name="queue_size" value="50"/>
+        <param name="config_file" value="$(arg config_file_path)"/>
+        <param name="optimize_pose_enabled" value="false"/>
+        <remap from="/sparse_stereo/tracked_features" to="/ORB_SLAM/tracked_features"/>
+    </node>
+
+</launch>	
+
+<!--launch-prefix="xterm -e gdb -ex run - -args"-->

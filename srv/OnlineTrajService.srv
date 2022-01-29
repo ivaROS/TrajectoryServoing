@@ -1,0 +1,3 @@
+geometry_msgs/PoseStamped goal
+---
+pips_trajectory_msgs/trajectory_points ni_traj

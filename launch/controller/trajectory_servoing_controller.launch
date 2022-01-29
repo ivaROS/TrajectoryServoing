@@ -1,0 +1,65 @@
+<launch>
+
+    <arg name="global_planner_name" default="global_planner"/>
+    <arg name="global_plan_topic" default="$(arg global_planner_name)/planner/plan"/>
+
+    <arg name="goal_check_mode" default="1"/>
+    <arg name="reg_enabled" default="false"/>
+    <arg name="uncert_enabled" default="true"/>
+    <arg name="sigmaMu" default="1"/>
+    <arg name="sigmaNu" default="1"/>
+    <arg name="sigmaD" default="0.15"/>
+    <arg name="feedforward_enabled" default="false"/>
+    <arg name="noise_std" default="0.0"/>
+    <arg name="speedcontrol_enabled" default="false"/>
+    <arg name="speedcontrol_p0" default="10000000"/> <!--10000000-->
+
+    <arg name="feature_topic" default="/ORB_SLAM/tracked_features"/>
+
+    <arg name="lambda" default="10"/>
+    <arg name="feat_traj_reg_thresh" default="10"/>
+
+    <arg name="odom_topic" default="/odom"/>
+    
+    <!--<node name="$(arg global_planner_name)" pkg="global_planner" type="planner" output="screen" launch-prefix="xterm -e gdb -ex run - -args">
+        <remap from="$(arg global_planner_name)/goal" to="/move_base_simple/goal"/>
+        <remap from="global_costmap" to="costmap"/>
+        <rosparam file="$(find nav_configs)/config/common_costmap_params.yaml" command="load" ns="costmap"/>
+        <rosparam file="$(find sparse_stereo)/config/global_costmap.yaml" command="load" ns="costmap"/>
+        <rosparam file="$(find sparse_stereo)/config/global_planner.yaml" command="load" ns="planner"/>
+    </node>-->
+    
+    <node name="vs" pkg="trajectory_servoing" type="trajectory_servo_navigator_node" output="screen" >
+        <remap from="/features" to="$(arg feature_topic)"/>
+        <param name="ni_traj_topic" value="/turtlebot_controller/trajectory_controller/desired_trajectory"/>
+        <param name="odom_topic" value="$(arg odom_topic)"/>
+        <param name="base_frame_id" value="base_footprint"/>
+        
+        <param name="lambda" value="$(arg lambda)"/> <!--10 short, 7 good long-->
+        <param name="milestone_thresh" value="0.2"/>
+        <param name="final_goal_thresh" value="0.3"/>
+        
+        <param name="pointsPerUnit" value="20"/>
+        <param name="skipPoints" value="5"/>
+        <param name="useEndConditions" value="false"/>
+        
+        <param name="continuous_type" value="true"/>
+        <param name="ni_traj_enabled" value="true"/>
+        
+        <param name="goal_check_mode" value="$(arg goal_check_mode)"/>
+        <param name="feat_traj_reg_enabled" value="$(arg reg_enabled)"/>
+        <param name="feat_traj_reg_thresh" value="$(arg feat_traj_reg_thresh)"/> <!--10-->
+        <param name="uncertainty_enabled" value="$(arg uncert_enabled)"/>
+        <param name="sigmaMu" value="$(arg sigmaMu)"/>
+        <param name="sigmaNu" value="$(arg sigmaNu)"/>
+        <param name="sigmaD" value="$(arg sigmaD)"/>
+	    <param name="noise_std" value="$(arg noise_std)"/>
+        <param name="feedforward_enabled" value="$(arg feedforward_enabled)"/>
+        <param name="speedcontrol_enabled" value="$(arg speedcontrol_enabled)"/>
+        <param name="speedcontrol_p0" value="$(arg speedcontrol_p0)"/>
+
+    </node>
+    
+    <!--launch-prefix="xterm -e gdb -ex run - -args"-->
+
+</launch>

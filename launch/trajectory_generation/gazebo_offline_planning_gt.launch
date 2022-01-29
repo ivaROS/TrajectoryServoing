@@ -1,0 +1,14 @@
+<launch>
+
+<arg name="waypts_yaml_dir" default = "$(find turtlebot_trajectory_testing)/config"/>
+<arg name="path_type" default="loop"/>
+<arg name="velocity_fwd" default = "0.5"/>
+<arg name="duration" default="40"/>
+
+<!--  -->
+<node name="turtlebot_trajectory_testing" pkg="turtlebot_trajectory_testing" type="send_test_trajectory" output="screen" args="_fw_vel:=$(arg velocity_fwd) _waypoint_yaml:=$(arg waypts_yaml_dir)/$(arg path_type).yaml _duration:=$(arg duration)" >
+    <param name="odom_topic" value="/ground_truth/state"/>
+</node>
+
+
+</launch>

@@ -1,0 +1,1 @@
+python ../../gazebo_turtlebot_simulator/script/reset_turtlebot_pose.py && rostopic pub -1 /mobile_base/commands/reset_odometry std_msgs/Empty '{}'

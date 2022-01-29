@@ -1,0 +1,25 @@
+<launch>
+
+    <arg name="global_planner_name" default="global_planner"/>
+    <arg name="global_plan_topic" default="$(arg global_planner_name)/planner/plan"/>
+    
+    <node name="send_online_trajectory" pkg="trajectory_servoing" type="send_online_trajectory" output="screen" >
+        <rosparam file="$(find trajectory_servoing)/configs/online_traj_configs/common_costmap_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find trajectory_servoing)/configs/online_traj_configs/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find trajectory_servoing)/configs/online_traj_configs/move_base_params.yaml" command="load"/>
+        <rosparam file="$(find trajectory_servoing)/configs/online_traj_configs/global_planner_params.yaml" command="load" ns="GlobalPlanner"/>
+        
+        <param name="base_frame_id" value="base_footprint"/>
+        <param name="odom_frame_id" value="odom"/>
+        
+        <param name="v_des" value="0.3"/>
+        
+        <param name="pointsPerUnit" value="20"/>
+        <param name="skipPoints" value="5"/>
+        <param name="useEndConditions" value="false"/>
+        
+    </node>
+    
+    <!--launch-prefix="xterm -e gdb -ex run - -args"-->
+
+</launch>
