@@ -20,7 +20,7 @@ This paper describes a stereo image-based visual servoing system for trajectory 
 
 - ROS (Kinetic Ubuntu 16.04) [Installation Link](http://wiki.ros.org/kinetic/Installation/Ubuntu)
 
-See the [installation instructions](https://github.com/ivaROS/TrajectoryServoing/blob/main/installation_guide.md)
+- Trajectory Servoing: See the [installation instructions](https://github.com/ivaROS/TrajectoryServoing/blob/main/installation_guide.md)
 
 # Run benchmark
 
