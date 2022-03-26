@@ -11,7 +11,7 @@ This paper describes a stereo image-based visual servoing system for trajectory 
 - [Real experiment setups](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/real_experiment_setups.md)
 
 - [Study of using V-SLAM poses with higher frequency](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/PoseUncertSupMat.pdf)
-- [Performance evaluation metrics and results](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/EvaluationMetrics.pdf)
+- [Performance evaluation metrics, results and p-values](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/EvaluationMetrics.pdf)
 - [Trajectory servoing control gains](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/TSControlGain.pdf)
 
 - [Manuscript symbols](https://github.com/ivaROS/TrajectoryServoing/blob/main/SuppMat/symbols.md)
