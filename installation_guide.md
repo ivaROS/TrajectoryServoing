@@ -35,12 +35,12 @@ Ignore the complaint for any `Cannot locate rosdep definition for [common_rosdep
 
 6. Go to `gazebo_turtlebot_simulator` repository to set up the simulator. Adjust the catkin workspace in __set_up_sim.sh__:
 ```
-	export CATKIN_WS=/home/XXX/catkin_ws/
+export CATKIN_WS=/home/XXX/catkin_ws/
 ```
 
 Then execute the auto setup script __set_up_sim.sh__ (will be asked for sudo authorization):
 ```
-	./set_up_sim.sh
+./set_up_sim.sh
 ```
 
 7. Build dependencies and supports for `gf_orb_slam2`. Go through `build_dep.sh` in this repository, check if all dependencies are needed, and run this file if some dependencies are not installed. OpenCV 3.4 is optional if 3.3 is installed by ROS kinetic. Then run `build_supports.sh`.
